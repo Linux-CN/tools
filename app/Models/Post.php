@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -13,6 +14,17 @@ class Post extends Model
 
     protected $filled = ['title', 'keywords', 'guid', 'excerpt', 'content', 'thumbnail'];
 
+    // for read
+
+    public function getCreatedAtAttribute($date)
+    {
+        if (Carbon::now() > Carbon::parse($date)->addDays(15)) {
+            return Carbon::parse($date);
+        }
+        return Carbon::parse($date)->diffForHumans();
+    }
+
+    // for search
     /**
      * Get the name of the index associated with the model.
      *

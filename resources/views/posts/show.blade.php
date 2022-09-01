@@ -1,4 +1,5 @@
 <x-guest-layout>
+@include('shared.navbar')
     title:{{$post->title}}<br>
     guid: {{$post->guid}}<br>
     keywords:{{$post->keywords}}<br>
@@ -7,4 +8,6 @@
 <br>
     image:<img src="{{$post->thumbnail}}"/><br>
     createdAt: {{$post->created_at}}
+
+ @include('shared.footer')
 </x-guest-layout>
