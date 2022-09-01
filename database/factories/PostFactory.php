@@ -17,12 +17,12 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            "title" => fake()->sentence(),
-            "guid" => fake()->uuid(),
-            "excerpt" => fake()->paragraph(1),
-            "keywords" => join(",",fake()->words(3)),
-            "thumbnail" => fake()->imageUrl(),
-            "content" => <<<EOF
+            'title' => fake()->sentence(),
+            'guid' => fake()->uuid(),
+            'excerpt' => fake()->paragraph(1),
+            'keywords' => implode(',', fake()->words(3)),
+            'thumbnail' => fake()->imageUrl(),
+            'content' => <<<EOF
 thanks for testcase https: //github.com/younghz/Markdown/blob/master/README.md
 ## 主要内容
 > #### Markdown*是什么*？
