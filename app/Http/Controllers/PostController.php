@@ -15,7 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::latest("created_at")->paginate(10);
+        return view('posts.index')->with('posts',$posts);
     }
 
     /**
@@ -47,7 +48,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view("posts.show",['post'=> $post]);
+        return view("posts.show")->with('post',$post);
     }
 
     /**
