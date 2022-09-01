@@ -13,13 +13,16 @@ Alpine.start();
 
 import * as bootstrap from 'bootstrap'
 
-/**
-* Blogzine - Blog and Magazine Bootstrap 5 Theme
-*
-* @author Webestica (https://www.webestica.com/)
-* @version 1.2.0
-**/
+import { tns } from "tiny-slider"
 
+import 'bootstrap-icons/font/bootstrap-icons.css'
+
+import Sticky from "sticky-js"
+
+
+import Plyr from "plyr";
+import "plyr/dist/plyr.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 /* ===================
 Table Of Content
