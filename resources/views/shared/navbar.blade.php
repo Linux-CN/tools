@@ -1,4 +1,110 @@
+@include("shared.topalert")
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+	<div class="offcanvas-header justify-content-end">
+		<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	</div>
+	<div class="offcanvas-body d-flex flex-column pt-0">
+		<div>
+			<img class="light-mode-item my-3" src="assets/images/logo.svg" alt="logo">
+			<img class="dark-mode-item my-3" src="assets/images/logo-light.svg" alt="logo">
+			<p>The next-generation blog, news, and magazine theme for you to start sharing your stories today! </p>
+			<!-- Nav START -->
+			<ul class="nav d-block flex-column my-4">
+				<li class="nav-item h5">
+					<a class="nav-link" href="index.html">Home</a>
+				<li class="nav-item h5">
+					<a class="nav-link" href="about-us.html">About</a>
+				</li>
+				<li class="nav-item h5">
+					<a class="nav-link" href="post-grid.html">Our Journal</a>
+				</li>
+				<li class="nav-item h5">
+					<a class="nav-link" href="contact-us.html">Contact Us</a>
+				</li>
+			</ul>
+			<!-- Nav END -->
+			<div class="bg-primary bg-opacity-10 p-4 mb-4 text-center w-100 rounded">
+				<span>The Blogzine</span>
+				<h3>Save on Premium Membership</h3>
+				<p>Get the insights report trusted by experts around the globe. Become a Member Today!</p>
+				<a href="#" class="btn btn-warning">View pricing plans</a>
+			</div>
+		</div>
+		<div class="mt-auto pb-3">
+			<!-- Address -->
+			<p class="text-body mb-2 fw-bold">New York, USA (HQ)</p>
+			<address class="mb-0">750 Sing Sing Rd, Horseheads, NY, 14845</address>
+			<p class="mb-2">Call: <a href="#" class="text-body"><u>469-537-2410</u> (Toll-free)</a> </p>
+			<a href="#" class="text-body d-block">hello@blogzine.com</a>
+		</div>
+	</div>
+</div>
+<!-- Offcanvas END -->
+
+<!-- =======================
+Header START -->
 <header class="navbar-light navbar-sticky header-static">
+	<div class="navbar-top d-none d-lg-block small">
+		<div class="container">
+			<div class="d-md-flex justify-content-between align-items-center my-2">
+				<!-- Top bar left -->
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link ps-0" href="about-us.html">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Forum</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://themes.getbootstrap.com/store/webestica/">Buy now!</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="signin.html">Login / Join</a>
+					</li>
+				</ul>
+				<!-- Top bar right -->
+				<div class="d-flex align-items-center">
+					<!-- Font size accessibility START -->
+					<div class="btn-group me-2" role="group" aria-label="font size changer">
+						<input type="radio" class="btn-check" name="fntradio" id="font-sm">
+						<label class="btn btn-xs btn-outline-primary mb-0" for="font-sm">A-</label>
+
+						<input type="radio" class="btn-check" name="fntradio" id="font-default" checked>
+						<label class="btn btn-xs btn-outline-primary mb-0" for="font-default">A</label>
+
+						<input type="radio" class="btn-check" name="fntradio" id="font-lg">
+						<label class="btn btn-xs btn-outline-primary mb-0" for="font-lg">A+</label>
+					</div>
+
+					<!-- Dark mode switch -->
+					<div class="modeswitch" id="darkModeSwitch">
+						<div class="switch"></div>
+					</div>
+
+					<ul class="nav">
+						<li class="nav-item">
+							<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-facebook-square"></i></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-twitter-square"></i></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-linkedin"></i></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-youtube-square"></i></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link ps-2 pe-0 fs-5" href="#"><i class="fab fa-vimeo"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Divider -->
+			<div class="border-bottom border-2 border-primary opacity-1"></div>
+		</div>
+	</div>
+
 	<!-- Logo Nav START -->
 	<nav class="navbar navbar-expand-lg">
 		<div class="container">
@@ -11,19 +117,19 @@
 
 			<!-- Responsive navbar toggler -->
 			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="text-body h6 d-none d-sm-inline-block">Menu</span>
-			  <span class="navbar-toggler-icon"></span>
-		  </button>
+				<span class="text-body h6 d-none d-sm-inline-block">Menu</span>
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
 			<!-- Main navbar START -->
 			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<ul class="navbar-nav navbar-nav-scroll ms-auto">
+				<ul class="navbar-nav navbar-nav-scroll mx-auto">
 
 					<!-- Nav item 1 Demos -->
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="homeMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+						<a class="nav-link dropdown-toggle active" href="#" id="homeMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
 						<ul class="dropdown-menu" aria-labelledby="homeMenu">
-							<li> <a class="dropdown-item" href="index.html">Home default</a></li>
+							<li> <a class="dropdown-item active" href="index.html">Home default</a></li>
 							<li> <a class="dropdown-item" href="index-lazy.html">Home lazy load</a></li>
 							<li> <a class="dropdown-item" href="index-2.html">Magazine classic</a></li>
 							<li> <a class="dropdown-item" href="index-3.html">Magazine</a></li>
@@ -132,7 +238,7 @@
 									<li> <a class="dropdown-item" href="post-grid-4-col.html">Post grid 4 col</a> </li>
 									<li> <a class="dropdown-item" href="post-grid-masonry.html">Post grid masonry</a> </li>
 									<li> <a class="dropdown-item" href="post-grid-masonry-filter.html">Post grid masonry filter</a> </li>
-									<li> <a class="dropdown-item" href="post-large-and-grid.html">Post mixed large then grid</a> </li>
+									<li> <a class="dropdown-item" href="post-large-and-grid.html">Post mixed large than grid</a> </li>
 								</ul>
 							</li>
 							<li> <a class="dropdown-item" href="post-list.html">Post list</a> </li>
@@ -252,43 +358,28 @@
 			<!-- Main navbar END -->
 
 			<!-- Nav right START -->
-			<div class="nav ms-sm-3 flex-nowrap align-items-center">
-				<!-- Dark mode switch -->
-				<div class="nav-item">
-					<div class="modeswitch" id="darkModeSwitch">
-						<div class="switch"></div>
-					</div>
-				</div>
-				<!-- Nav additional link -->
-				<div class="nav-item dropdown dropdown-toggle-icon-none">
-					<a class="nav-link dropdown-toggle" role="button" href="#" id="navAdditionalLink" data-bs-toggle="dropdown" aria-expanded="false">
-						<i class="bi bi-three-dots fs-4"></i>
-					</a>
-					<ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded text-end" aria-labelledby="navAdditionalLink">
-						<li><a class="dropdown-item fw-normal" href="#">About</a></li>
-						<li><a class="dropdown-item fw-normal" href="#">Newsletter</a></li>
-						<li><a class="dropdown-item fw-normal" href="#">Author</a></li>
-						<li><a class="dropdown-item fw-normal" href="#">#Tags</a></li>
-						<li><a class="dropdown-item fw-normal" href="#">Contact</a></li>
-						<li><a class="dropdown-item fw-normal" href="#"><span class="badge bg-danger me-2 align-middle">2 Job</span>Careers</a></li>
-					</ul>
-				</div>
-
+			<div class="nav flex-nowrap align-items-center">
 				<!-- Nav Button -->
 				<div class="nav-item d-none d-md-block">
 					<a href="#" class="btn btn-sm btn-danger mb-0 mx-2">Subscribe!</a>
 				</div>
 				<!-- Nav Search -->
-				<div class="nav-item dropdown nav-search dropdown-toggle-icon-none">
-					<a class="nav-link pe-0 dropdown-toggle" role="button" href="#" id="navSearch" data-bs-toggle="dropdown" aria-expanded="false">
+				<div class="nav-item dropdown dropdown-toggle-icon-none nav-search">
+					<a class="nav-link dropdown-toggle" role="button" href="#" id="navSearch" data-bs-toggle="dropdown" aria-expanded="false">
 						<i class="bi bi-search fs-4"> </i>
 					</a>
 					<div class="dropdown-menu dropdown-menu-end shadow rounded p-2" aria-labelledby="navSearch">
-					  <form class="input-group">
-					    <input class="form-control border-success" type="search" placeholder="Search" aria-label="Search">
-					    <button class="btn btn-success m-0" type="submit">Search</button>
-					  </form>
+						<form class="input-group">
+							<input class="form-control border-success" type="search" placeholder="Search" aria-label="Search">
+							<button class="btn btn-success m-0" type="submit">Search</button>
+						</form>
 					</div>
+				</div>
+				<!-- Offcanvas menu toggler -->
+				<div class="nav-item">
+					<a class="nav-link p-0" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button" aria-controls="offcanvasMenu">
+						<i class="bi bi-text-right rtl-flip fs-2" data-bs-target="#offcanvasMenu"> </i>
+					</a>
 				</div>
 			</div>
 			<!-- Nav right END -->
@@ -296,3 +387,5 @@
 	</nav>
 	<!-- Logo Nav END -->
 </header>
+<!-- =======================
+Header END -->
