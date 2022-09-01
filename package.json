@@ -1,23 +1,26 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build"
-    },
-    "devDependencies": {
-        "@tailwindcss/forms": "^0.5.2",
-        "@tailwindcss/typography": "^0.5.0",
-        "alpinejs": "^3.0.6",
-        "autoprefixer": "^10.4.7",
-        "axios": "^0.27",
-        "laravel-vite-plugin": "^0.6.0",
-        "lodash": "^4.17.19",
-        "postcss": "^8.4.14",
-        "tailwindcss": "^3.1.0",
-        "vite": "^3.0.0"
-    },
-    "dependencies": {
-        "@material-tailwind/html": "^1.2.1",
-        "shiki": "^0.11.1"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/typography": "^0.5.0",
+    "alpinejs": "^3.0.6",
+    "autoprefixer": "^10.4.7",
+    "axios": "^0.27",
+    "laravel-vite-plugin": "^0.6.0",
+    "lodash": "^4.17.19",
+    "postcss": "^8.4.14",
+    "sass": "^1.54.8",
+    "tailwindcss": "^3.1.0",
+    "vite": "^3.0.0"
+  },
+  "dependencies": {
+    "@material-tailwind/html": "^1.2.1",
+    "shiki": "^0.11.1",
+    "bootstrap": "^5.2.0",
+    "@popperjs/core": "^2.11.6"
+  }
 }

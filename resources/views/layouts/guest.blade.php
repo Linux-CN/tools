@@ -11,13 +11,18 @@
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/icon?family=Material+Icons" rel="stylesheet" />
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/scss/style.scss', 'resources/js/index.js'])
+    <script type="text/javascript">
+        window.darkThemeLink = "{{Vite::asset('resources/scss/style-dark.scss')}}"
+        window.lightThemeLink = "{{Vite::asset('resources/scss/style.scss')}}"
+    </script>
 </head>
 
 <body>
-    <div class="font-sans text-gray-900 antialiased">
+    <div>
         {{ $slot }}
     </div>
+
 </body>
 
 </html>
