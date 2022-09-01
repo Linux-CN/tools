@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get("/posts/{post}","App\Http\Controllers\PostController@show");
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
