@@ -119,8 +119,8 @@ var e = {
         e.quill(),
         e.videoPlyr()
         e.overlayScrollbars(),
-        e.trafficsourcesChart(),
-        e.trafficstatsChart();
+        // e.trafficsourcesChart(),
+        // e.trafficstatsChart();
     },
     isVariableDefined: function (el) {
         return typeof !!el && (el) != 'undefined' && el != null;
