@@ -2,7 +2,7 @@ name: Laravel Tests
 on:
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   laravel-tests:
