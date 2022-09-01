@@ -33,6 +33,7 @@ class PostController extends Controller
     public function search(Request $request)
     {
         $posts = Post::search($request->q)->paginate(10);
-        return view("posts.search")->with('posts',$posts)->with('search',$request->q);
+
+        return view('posts.search')->with('posts', $posts)->with('search', $request->q);
     }
 }
