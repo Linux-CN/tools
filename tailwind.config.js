@@ -1,4 +1,3 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
 const withMT = require("@material-tailwind/html/utils/withMT");
 
 
@@ -14,7 +13,6 @@ module.exports = withMT({
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
         },
     },
