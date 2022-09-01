@@ -1,8 +1,8 @@
-const withMT = require("@material-tailwind/html/utils/withMT");
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 
 /** @type {import('tailwindcss').Config} */
-module.exports = withMT({
+module.exports = {
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './vendor/laravel/jetstream/**/*.blade.php',
@@ -18,4 +18,4 @@ module.exports = withMT({
     },
 
     plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
-});
+};
