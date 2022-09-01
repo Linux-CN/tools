@@ -118,7 +118,7 @@ var e = {
         e.lazyLoading(),
         e.quill(),
         e.videoPlyr()
-        e.overlayScrollbars(),
+        e.overlayScrollbars();
         // e.trafficsourcesChart(),
         // e.trafficstatsChart();
     },
