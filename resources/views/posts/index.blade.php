@@ -1,8 +1,5 @@
 <x-guest-layout>
     @include('shared.navbar')
-
-    {{ $posts->links() }}
-
     <section class="position-relative">
         <div class="container" data-sticky-container>
             <div class="row">
@@ -31,12 +28,7 @@
                                     </div>
                                     <div class="card-body px-0 pt-3">
                                         <!-- Sponsored Post -->
-                                        <a href="#!" class="mb-0 text-body small" tabindex="0" role="button"
-                                            data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus"
-                                            data-bs-placement="top"
-                                            data-bs-content="You're seeing this ad because your activity meets the intended audience of our site.">
-                                            <i class="bi bi-info-circle ps-1"></i> Sponsored
-                                        </a>
+
                                         <h4 class="card-title mt-2"><a href="post-single.html"
                                                 class="btn-link text-reset fw-bold">{{ $post->title }}</a></h4>
                                         <p class="card-text">{{ $post->excerpt }}</p>
@@ -63,7 +55,6 @@
                         @endforeach
 
 
-                        <!-- Card item START -->
                         <div class="col-sm-6">
                             <div class="card">
                                 <!-- Card img -->
@@ -87,9 +78,14 @@
                                     </div>
                                 </div>
                                 <div class="card-body px-0 pt-3">
+                                 <a href="#!" class="mb-0 text-body small" tabindex="0" role="button"
+                                            data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus"
+                                            data-bs-placement="top"
+                                            data-bs-content="You're seeing this ad because your activity meets the intended audience of our site.">
+                                            <i class="bi bi-info-circle ps-1"></i> 广告文章
+                                        </a>
                                     <h4 class="card-title"><a href="post-single.html"
-                                            class="btn-link text-reset fw-bold">7 common mistakes everyone makes while
-                                            traveling</a></h4>
+                                            class="btn-link text-reset fw-bold">音频特有</a></h4>
                                     <p class="card-text">Drawings offended yet answered Jennings perceive laughing six
                                         did far. Rooms oh fully taken by worse do. Points afraid but may end law lasted.
                                     </p>
@@ -116,7 +112,7 @@
 
                         <!-- Load more START -->
                         <div class="col-12 text-center mt-5">
-                            <button type="button" class="btn btn-primary-soft">Load more post <i
+                            <button type="button" class="btn btn-primary-soft">查看更多 <i
                                     class="bi bi-arrow-down-circle ms-2 align-middle"></i></button>
                         </div>
                         <!-- Load more END -->
@@ -131,24 +127,24 @@
                         <div class="row g-2">
                             <div class="col-4">
                                 <a href="#" class="bg-facebook rounded text-center text-white-force p-3 d-block">
-                                    <i class="fab fa-facebook-square fs-5 mb-2"></i>
-                                    <h6 class="m-0">1.5K</h6>
-                                    <span class="small">Fans</span>
+                                    <i class="fab fa-github fs-5 mb-2"></i>
+                                    <h6 class="m-0">2.9K</h6>
+                                    <span class="small">Stars</span>
                                 </a>
                             </div>
                             <div class="col-4">
                                 <a href="#"
                                     class="bg-instagram-gradient rounded text-center text-white-force p-3 d-block">
-                                    <i class="fab fa-instagram fs-5 mb-2"></i>
+                                    <i class="fab fa-twitter fs-5 mb-2"></i>
                                     <h6 class="m-0">1.8M</h6>
-                                    <span class="small">Followers</span>
+                                    <span class="small">跟随者</span>
                                 </a>
                             </div>
                             <div class="col-4">
                                 <a href="#" class="bg-youtube rounded text-center text-white-force p-3 d-block">
                                     <i class="fab fa-youtube-square fs-5 mb-2"></i>
                                     <h6 class="m-0">22K</h6>
-                                    <span class="small">Subs</span>
+                                    <span class="small">关注</span>
                                 </a>
                             </div>
                         </div>
@@ -156,12 +152,12 @@
 
                         <!-- Trending topics widget START -->
                         <div>
-                            <h4 class="mt-4 mb-3">Trending topics</h4>
+                            <h4 class="mt-4 mb-3">热门主题</h4>
                             <!-- Category item -->
                             <div class="text-center mb-3 card-bg-scale position-relative overflow-hidden rounded bg-dark-overlay-4 "
                                 style="background-image:url(assets/images/blog/4by3/01.jpg); background-position: center left; background-size: cover;">
                                 <div class="p-3">
-                                    <a href="#" class="stretched-link btn-link fw-bold text-white h5">Travel</a>
+                                    <a href="#" class="stretched-link btn-link fw-bold text-white h5">CentOS</a>
                                 </div>
                             </div>
                             <!-- Category item -->
@@ -169,7 +165,7 @@
                                 style="background-image:url(assets/images/blog/4by3/02.jpg); background-position: center left; background-size: cover;">
                                 <div class="bg-dark-overlay-4 p-3">
                                     <a href="#"
-                                        class="stretched-link btn-link fw-bold text-white h5">Business</a>
+                                        class="stretched-link btn-link fw-bold text-white h5">Ubuntu</a>
                                 </div>
                             </div>
                             <!-- Category item -->
@@ -177,7 +173,7 @@
                                 style="background-image:url(assets/images/blog/4by3/03.jpg); background-position: center left; background-size: cover;">
                                 <div class="bg-dark-overlay-4 p-3">
                                     <a href="#"
-                                        class="stretched-link btn-link fw-bold text-white h5">Marketing</a>
+                                        class="stretched-link btn-link fw-bold text-white h5">Debian</a>
                                 </div>
                             </div>
                             <!-- Category item -->
@@ -185,20 +181,19 @@
                                 style="background-image:url(assets/images/blog/4by3/04.jpg); background-position: center left; background-size: cover;">
                                 <div class="bg-dark-overlay-4 p-3">
                                     <a href="#"
-                                        class="stretched-link btn-link fw-bold text-white h5">Photography</a>
+                                        class="stretched-link btn-link fw-bold text-white h5">Linux</a>
                                 </div>
                             </div>
                             <!-- Category item -->
                             <div class="text-center mb-3 card-bg-scale position-relative overflow-hidden rounded"
                                 style="background-image:url(assets/images/blog/4by3/05.jpg); background-position: center left; background-size: cover;">
                                 <div class="bg-dark-overlay-4 p-3">
-                                    <a href="#" class="stretched-link btn-link fw-bold text-white h5">Sports</a>
+                                    <a href="#" class="stretched-link btn-link fw-bold text-white h5">Manjaro</a>
                                 </div>
                             </div>
                             <!-- View All Category button -->
                             <div class="text-center mt-3">
-                                <a href="#" class="fw-bold text-body text-primary-hover"><u>View all
-                                        categories</u></a>
+                                <a href="#" class="fw-bold text-body text-primary-hover"><u>查看所有目录</u></a>
                             </div>
                         </div>
                         <!-- Trending topics widget END -->
@@ -206,7 +201,7 @@
                         <div class="row">
                             <!-- Recent post widget START -->
                             <div class="col-12 col-sm-6 col-lg-12">
-                                <h4 class="mt-4 mb-3">Recent post</h4>
+                                <h4 class="mt-4 mb-3">最近文章</h4>
                                 <!-- Recent post item -->
                                 <div class="card mb-3">
                                     <div class="row g-3">
