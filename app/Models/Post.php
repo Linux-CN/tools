@@ -3,11 +3,13 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Laravel\Scout\Searchable;
 use Illuminate\Support\Arr;
+use Laravel\Scout\Searchable;
+use App\Casts\CreatedAt;
 
 class Post extends Model
 {
@@ -16,21 +18,19 @@ class Post extends Model
     protected $filled = ['title', 'keywords', 'guid', 'excerpt', 'content', 'thumbnail'];
     protected $searchIndex = ["title", "excerpt", "content", "keywords"];
 
-    public function author(){
-        return $this->belongsTo(User::class,"user_id");
-    }
+    protected $casts = [
+        'created_at' => CreatedAt::class,
+    ];
 
-    public function getCreatedAtAttribute($date)
+    public function author()
     {
-        if (Carbon::now() > Carbon::parse($date)->addDays(15)) {
-            return Carbon::parse($date);
-        }
-        return Carbon::parse($date)->diffForHumans();
+        return $this->belongsTo(User::class, "user_id");
     }
     /**
      * generate link for post show
      */
-    public function getLinkAttribute(){
+    public function getLinkAttribute()
+    {
         return route('post.show', ['post' => $this->id]);
     }
 
