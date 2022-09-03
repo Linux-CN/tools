@@ -104,7 +104,7 @@ Header START -->
 	<nav class="navbar navbar-expand-lg">
 		<div class="container">
 			<!-- Logo START -->
-			<a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="{{route('homepage')}}">
 				<img class="navbar-brand-item light-mode-item" src="https://img.linux.net.cn/static/image/common/linuxcn_logo_2017.png" alt="logo">
 				<img class="navbar-brand-item dark-mode-item" src="https://img.linux.net.cn/static/image/common/linuxcn_logo_2017.png" alt="logo">
 			</a>

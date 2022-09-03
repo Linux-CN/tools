@@ -11,9 +11,9 @@
                             <h1>{{ $category->title }}</h1>
                             <nav class="d-flex justify-content-center" aria-label="breadcrumb">
                                 <ol class="breadcrumb breadcrumb-dots m-0">
-                                    <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house me-1"></i>
-                                            Home</a></li>
-                                    <li class="breadcrumb-item active">All post</li>
+                                    <li class="breadcrumb-item"><a href="{{route('homepage')}}"><i class="bi bi-house me-1"></i>
+                                            首页</a></li>
+                                    <li class="breadcrumb-item active">所有文章</li>
                                 </ol>
                             </nav>
                         </div>
