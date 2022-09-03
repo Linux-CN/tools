@@ -16,20 +16,18 @@
                                 <div class="card">
                                     <!-- Card img -->
                                     <div class="position-relative">
-                                        <img class="card-img" src="assets/images/blog/4by3/01.jpg" alt="Card image">
+                                        <img class="card-img" src="{{$post->thumbnail}}" alt="Card image">
                                         <div class="card-img-overlay d-flex align-items-start flex-column p-3">
                                             <!-- Card overlay bottom -->
                                             <div class="w-100 mt-auto">
                                                 <!-- Card category -->
-                                                <a href="#" class="badge text-bg-warning mb-2"><i
+                                                <a href="{{$post->link}}" class="badge text-bg-warning mb-2"><i
                                                         class="fas fa-circle me-2 small fw-bold"></i>Technology</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card-body px-0 pt-3">
-                                        <!-- Sponsored Post -->
-
-                                        <h4 class="card-title mt-2"><a href="post-single.html"
+                                        <h4 class="card-title mt-2"><a href="{{$post->link}}"
                                                 class="btn-link text-reset fw-bold">{{ $post->title }}</a></h4>
                                         <p class="card-text">{{ $post->excerpt }}</p>
                                         <!-- Card info -->

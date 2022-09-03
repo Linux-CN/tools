@@ -24,6 +24,13 @@ class Post extends Model
         return Carbon::parse($date)->diffForHumans();
     }
 
+    /**
+     * generate link for post show
+     */
+    public function getLinkAttribute(){
+        return route('post.show', ['post' => $this->id]);
+    }
+
     // for search
     /**
      * Get the name of the index associated with the model.
