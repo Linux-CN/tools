@@ -37,10 +37,10 @@
                                                     <div class="d-flex align-items-center position-relative">
                                                         <div class="avatar avatar-xs">
                                                             <img class="avatar-img rounded-circle"
-                                                                src="assets/images/avatar/01.jpg" alt="avatar">
+                                                                src="{{$post->author->profile_photo_url}}" alt="avatar">
                                                         </div>
                                                         <span class="ms-3">by <a href="#"
-                                                                class="stretched-link text-reset btn-link">Samuel</a></span>
+                                                                class="stretched-link text-reset btn-link">{{$post->author->name}}</a></span>
                                                     </div>
                                                 </div>
                                             </li>
