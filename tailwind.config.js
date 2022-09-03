@@ -1,6 +1,3 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
@@ -9,13 +6,5 @@ module.exports = {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
     ],
-
-    theme: {
-        extend: {
-            fontFamily: {
-            },
-        },
-    },
-
     plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };
