@@ -122,7 +122,7 @@ Header START -->
 
 					<!-- Nav item 1 Demos -->
 					<li class="nav-item ">
-						<a class="nav-link active" href="#" id="homeMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">首页</a>
+						<a class="nav-link active" href="{{route('homepage')}}" id="homeMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">首页</a>
 
 					</li>
 
