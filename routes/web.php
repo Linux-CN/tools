@@ -17,6 +17,7 @@ Route::get('/', "App\Http\Controllers\PostController@index");
 Route::get('/search', "App\Http\Controllers\PostController@search");
 
 Route::get('/posts/{post}', "App\Http\Controllers\PostController@show")->name("post.show");
+Route::get('/categories/{category}', "App\Http\Controllers\CategoryController@show")->name("category.show");
 
 Route::middleware([
     'auth:sanctum',

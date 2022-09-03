@@ -17,6 +17,7 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
+            'user_id' => 1,
             'title' => fake()->sentence(),
             'guid' => fake()->uuid(),
             'excerpt' => fake()->paragraph(1),
