@@ -14,7 +14,7 @@
         "laravel/scout": "^9.4",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.5",
-        "meilisearch/meilisearch-php": "^0.25.0",
+        "meilisearch/meilisearch-php": "^1.0.0",
         "spatie/laravel-markdown": "^2.2"
     },
     "require-dev": {
