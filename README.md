@@ -4,3 +4,10 @@
 ## Packages
 
 - joelbutcher/socialstream: for social login 
+- beyondcode/laravel-server-timing: for server timing api & performance review
+- "laravel-lang/common: for lang files update
+
+
+## external file
+
+- `deploy.sh`: for production server load file via webhook
