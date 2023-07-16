@@ -10,6 +10,7 @@ class Completion extends Model
 {
     use HasFactory,SoftDeletes;
 
+    protected $fillable = ["user_id","source","target","token"];
     public function user(){
         return $this->belongsTo(User::class);
     }

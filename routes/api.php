@@ -14,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+Route::prefix('/v1/')->middleware('auth:sanctum')->group(function (){
+    # User
+    Route::get('/user',[App\Http\Controllers\API\V1\UserController::class,'getUserInfo']);
+
+    # Completion
+    Route::post('/completions',[App\Http\Controllers\API\V1\CompletionController::class,'createCompletion']);
+    # Post
+
+    # Selector
+
+
 });

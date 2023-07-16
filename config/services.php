@@ -39,4 +39,7 @@ return [
         'client_secret' => env('TWITTER_CLIENT_SECRET'),
         'redirect' => '/oauth/twitter/callback',
     ],
+    'openai' => [
+        "key" => env('OPENAI_KEY')
+    ]
 ];
