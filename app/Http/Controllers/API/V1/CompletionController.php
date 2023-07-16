@@ -36,6 +36,7 @@ class CompletionController extends Controller
         $result = $client->completions()->create([
             'model' => 'text-davinci-003',
             'prompt' => $prompt,
+            'max_tokens' => 2048,
         ]);
 
         $completion =  Completion::create([
