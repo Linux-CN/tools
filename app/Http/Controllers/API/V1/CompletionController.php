@@ -19,11 +19,15 @@ class CompletionController extends Controller
         $source = $request->source;
         $user = auth()->user();
 
+        if(!$request->user()->tokenCan('completion:create')){
+            return $this->errorResponse("don't have enough scope for this action",[],3,403);
+        }
+
         $config = new Gpt3TokenizerConfig();
         $tokenizer = new Gpt3Tokenizer($config);
         $numberOfTokens = $tokenizer->count($source);
         if($user->llm_tokens < $numberOfTokens){
-            return  $this->errorResponse("don't have enought tokens",[],2,402);
+            return  $this->errorResponse("don't have enough tokens",[],2,402);
         }
 
 
