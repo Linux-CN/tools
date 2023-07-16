@@ -74,4 +74,9 @@ class User extends Authenticatable
             ? Attribute::get(fn () => $this->profile_photo_path)
             : $this->getPhotoUrl();
     }
+
+    public function completions()
+    {
+        return $this->hasMany(Completion::class);
+    }
 }
