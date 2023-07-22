@@ -31,8 +31,8 @@ return [
 
     'providers' => [
         Providers::github(),
-        Providers::google(),
-        Providers::twitter()
+//        Providers::google(),
+//        Providers::twitter()
     ],
 
     /*
