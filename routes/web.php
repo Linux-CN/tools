@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[\App\Http\Controllers\WebsiteController::class,'construction']);
+Route::Get('/contributor_term',[\App\Http\Controllers\MarkdownPageController::class,'contributor_term']);
 
 Route::middleware([
     'auth:sanctum',
