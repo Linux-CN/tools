@@ -79,4 +79,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Completion::class);
     }
+
+    public function canAccessFilament(): bool
+    {
+        return $this->is_super_admin;
+    }
 }
