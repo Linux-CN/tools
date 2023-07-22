@@ -46,7 +46,7 @@ class CompletionResource extends Resource
                 Tables\Columns\TextColumn::make('user.name')->searchable()
                    ,
                 Tables\Columns\TextColumn::make('source'),
-                Tables\Columns\TextColumn::make('token'),
+                Tables\Columns\TextColumn::make('token')->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->sortable()->date(),
             ])
