@@ -20,7 +20,9 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+
+    Route::controller(App\Http\Controllers\DashboardController::class)->prefix('/dashboard')->name('dashboard')->group(function (){
+        Route::get('/','dashboard');
+        Route::get('/faucet','faucet')->name('.faucet');
+    });
 });
