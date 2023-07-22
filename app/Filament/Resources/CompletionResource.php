@@ -48,7 +48,7 @@ class CompletionResource extends Resource
                 Tables\Columns\TextColumn::make('source'),
                 Tables\Columns\TextColumn::make('token'),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()->sortable()->date(),
+                    ->sortable()->date(),
             ])
             ->filters([
                 //
