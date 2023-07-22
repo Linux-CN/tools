@@ -71,7 +71,10 @@
     </section>
     <section class="position-relative bg-secondary-dark py-24 py-md-40 overflow-hidden"><div class="container">
             <div class="text-center py-auto my-auto">
-                <h1 class="text-black mt-10">网站建设中</h1>
+                <div class="px-20 py-3 my-5 mx-5">
+                    <x-application-mark  />
+                </div>
+                <h1 class="text-black mt-5">网站建设中</h1>
             </div>
             <div class="text-center mt-5"><a class="btn btn-primary btn-lg" href="{{ route('dashboard') }}">先看看 AI?</a></div>
         </div>
