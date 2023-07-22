@@ -189,5 +189,10 @@
     "You may delete any of your existing tokens if they are no longer needed.": "如果不再需要，您可以删除任何现有的令牌。",
     "You may not delete your personal team.": "您不能删除您的个人团队。",
     "You may not leave a team that you created.": "您不能离开您创建的团队。",
-    "Your email address is unverified.": "您的电子邮箱未经验证。"
+    "Your email address is unverified.": "您的电子邮箱未经验证。",
+    "Faucet": "水龙头",
+    "What is Faucet": "什么是水龙头",
+    "You can get 5000 Tokens from Faucet every day, you can use it for translate article.": "通过水龙头，每天你可以获取到 5000 个 可以用于翻译文章Token。",
+    "Give me 5000 Tokens": "给我今天的 Token",
+    "You have claim today\\'s token": "你已经领取了今天的 Token."
 }
