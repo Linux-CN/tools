@@ -85,6 +85,6 @@ class User extends Authenticatable
     }
     public function canAccessFilament(): bool
     {
-        return $this->is_super_admin;
+        return $this->is_super_user;
     }
 }
