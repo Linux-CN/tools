@@ -29,10 +29,6 @@ class UserResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('email')
-                    ->email()
-                    ->required()
-                    ->maxLength(255),
 
                 Forms\Components\TextInput::make('llm_tokens')
                     ->required(),
@@ -45,21 +41,21 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('profilePhotoUrl'),
-                Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('email'),
-                Tables\Columns\IconColumn::make('is_super_user'),
+                Tables\Columns\ImageColumn::make('profilePhotoUrl')->label("头像"),
+                Tables\Columns\TextColumn::make('name')->label("昵称"),
+                Tables\Columns\TextColumn::make('email')->label("邮箱"),
+                Tables\Columns\IconColumn::make('is_super_user')->boolean()->sortable()->label("是否是超管"),
                 Tables\Columns\TextColumn::make('email_verified_at')
-                    ->date(),
+                    ->date()->label("邮箱验证时间"),
                 Tables\Columns\TextColumn::make('two_factor_confirmed_at')
-                    ->date(),
-                Tables\Columns\TextColumn::make('currentConnectedAccount.provider'),
+                    ->date()->label("两步验证时间"),
+                Tables\Columns\TextColumn::make('currentConnectedAccount.provider')->label("登录平台"),
 
                 Tables\Columns\TextColumn::make('created_at')
-                    ->date(),
+                    ->date()->label("注册时间"),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->date(),
-                Tables\Columns\TextColumn::make('llm_tokens'),
+                Tables\Columns\TextColumn::make('llm_tokens')->label("Credit"),
             ])
             ->filters([
                 //
