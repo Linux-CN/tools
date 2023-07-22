@@ -118,6 +118,14 @@
                                 </x-dropdown-link>
                             @endif
 
+
+                            @if(Auth::user()->canAccessFilament())
+                                <div class="border-t border-gray-200"></div>
+                                <x-dropdown-link href="{{ route('filament.pages.dashboard') }}">
+                                    {{ __('Admin Dashboard') }}
+                                </x-dropdown-link>
+
+                            @endif
                             <div class="border-t border-gray-200"></div>
 
                             <!-- Authentication -->
@@ -179,6 +187,14 @@
                     <x-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
                         {{ __('API Tokens') }}
                     </x-responsive-nav-link>
+
+                @endif
+
+                @if(Auth::user()->canAccessFilament())
+                <div class="border-t border-gray-200"></div>
+                <x-responsive-nav-link href="{{ route('filament.pages.dashboard') }}" :active="request()->routeIs('filament.pages.dashboard')">
+                    {{ __('Admin Dashboard') }}
+                </x-responsive-nav-link>
                 @endif
 
                 <!-- Authentication -->
@@ -190,6 +206,8 @@
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>
                 </form>
+
+
 
                 <!-- Team Management -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
