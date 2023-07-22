@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo -u www git pull
-sudo -u www yarn install --production
+sudo -u www yarn install
 sudo -u www yarn run build
 sudo -u www /usr/local/php/bin/php artisan route:clear
 sudo -u www /usr/local/php/bin/php artisan config:clear
