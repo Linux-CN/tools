@@ -14,6 +14,6 @@ sudo -u www /usr/local/php/bin/php artisan route:cache
 sudo -u www /usr/local/php/bin/php artisan config:cache
 sudo -u www /usr/local/php/bin/php artisan view:cache
 sudo -u www /usr/local/php/bin/php artisan lang:update
-curl 'https://oapi.dingtalk.com/robot/send?access_token=1a6e92b7273b75fb93803ec9133a30f18f135d644faaf6339fdbf155897d2278 ' \
+curl https://oapi.dingtalk.com/robot/send?access_token=1a6e92b7273b75fb93803ec9133a30f18f135d644faaf6339fdbf155897d2278  \
  -H 'Content-Type: application/json' \
  -d '{"msgtype": "text","text": {"content":"服务部署成功"}}'
