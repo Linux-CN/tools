@@ -10,13 +10,13 @@
         "gioni06/gpt3-tokenizer": "^1.2",
         "guzzlehttp/guzzle": "^7.2",
         "joelbutcher/socialstream": "^4.1",
+        "laravel-lang/common": "^3.1",
         "laravel/framework": "^10.10",
         "laravel/jetstream": "^3.2",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^2.11",
         "openai-php/client": "^0.6.3"
-        "laravel-lang/common": "^3.1",
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
