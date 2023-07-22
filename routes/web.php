@@ -24,5 +24,6 @@ Route::middleware([
     Route::controller(App\Http\Controllers\DashboardController::class)->prefix('/dashboard')->name('dashboard')->group(function (){
         Route::get('/','dashboard');
         Route::get('/faucet','faucet')->name('.faucet');
+        Route::get('/completions','completions')->name('.completions');
     });
 });

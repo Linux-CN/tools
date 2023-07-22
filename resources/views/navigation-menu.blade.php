@@ -21,6 +21,11 @@
                         {{ __('Faucet') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('dashboard.completions') }}" :active="request()->routeIs('dashboard.completions')">
+                        {{ __('Completion Records') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">

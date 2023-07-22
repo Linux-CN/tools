@@ -20,4 +20,8 @@ class DashboardController extends Controller
     public function faucet(Request $request){
         return view('dashboard.faucet');
     }
+
+    public function completions(Request $request){
+        return view("dashboard.completions");
+    }
 }
