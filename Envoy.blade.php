@@ -3,6 +3,7 @@
 @story('deploy')
 update-code
 install-dependencies
+migrate
 rebuild-cache
 @endstory
 
@@ -12,9 +13,9 @@ update-code
 
 
 @task('update-code')
-    cd /data/wwwroot/alpha.linux.cn
-    git pull
-    chown -R www.www /data/wwwroot/alpha.linux.cn
+cd /data/wwwroot/alpha.linux.cn
+git pull
+chown -R www.www /data/wwwroot/alpha.linux.cn
 @endtask
 
 @task('install-dependencies')
@@ -39,5 +40,5 @@ sudo -u www /usr/local/php/bin/php artisan view:cache
 
 @task('migrate')
 cd /data/wwwroot/alpha.linux.cn
-    sudo -u www /usr/local/php/bin/php artisan migrate --force
+sudo -u www /usr/local/php/bin/php artisan migrate --force
 @endtask
