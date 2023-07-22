@@ -21,6 +21,8 @@ update-code
 
 @task('update-code',[ 'on' => 'server'])
 cd /data/wwwroot/alpha.linux.cn
+git add .
+git checkout -f
 git pull
 chown -R www.www /data/wwwroot/alpha.linux.cn
 @endtask
@@ -37,11 +39,10 @@ chown -R www.www /data/wwwroot/alpha.linux.cn/vendor
 
 @task('rebuild-cache',[ 'on' => 'server'])
 cd /data/wwwroot/alpha.linux.cn
-sudo -u www /usr/local/php/bin/php artisan route:clear
-sudo -u www /usr/local/php/bin/php artisan config:clear
+sudo -u www /usr/local/php/bin/php artisan cache:clear
 sudo -u www /usr/local/php/bin/php artisan view:clear
-sudo -u www /usr/local/php/bin/php artisan route:cache
-sudo -u www /usr/local/php/bin/php artisan config:cache
+
+sudo -u www /usr/local/php/bin/php artisan optimize
 sudo -u www /usr/local/php/bin/php artisan view:cache
 @endtask
 
