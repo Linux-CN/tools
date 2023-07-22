@@ -141,6 +141,7 @@ return [
         'register' => [
             \App\Filament\Resources\UserResource\Widgets\UserCharts::class,
             \App\Filament\Resources\CompletionResource\Widgets\CompletionCharts::class,
+            \App\Filament\Resources\FaucetResource\Widgets\FaucetChart::class,
         ],
     ],
 
