@@ -6,7 +6,7 @@ sudo -u www /usr/local/php/bin/php artisan route:clear
 sudo -u www /usr/local/php/bin/php artisan config:clear
 sudo -u www /usr/local/php/bin/php artisan view:clear
 sudo -u www /usr/local/php/bin/php /usr/local/bin/composer install  --prefer-dist --no-dev -o
-sudo -u www /usr/local/php/bin/php artisan migrate
+sudo -u www /usr/local/php/bin/php artisan migrate -y
 sudo -u www /usr/local/php/bin/php artisan route:cache
 sudo -u www /usr/local/php/bin/php artisan config:cache
 sudo -u www /usr/local/php/bin/php artisan view:cache
