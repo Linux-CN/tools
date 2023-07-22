@@ -29,7 +29,7 @@ class Faucet extends Component
 
     public function booted()
     {
-        $count = FaucetModel::whereDate("created_at",Carbon::today())->count();
+        $count = FaucetModel::whereDate("created_at",Carbon::today())->where("user_id",Auth::id())->count();
         if($count != 0){
             $this->hasTodayRecords = true;
         }
