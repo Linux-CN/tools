@@ -1,4 +1,5 @@
 #!/bin/bash
+git config --global --add safe.directory '*'
 git pull
 chown -R www.www /data/wwwroot/alpha.linux.cn
 #find /data/wwwroot/alpha.linux.cn -type d -exec chmod 755 {} \;
