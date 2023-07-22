@@ -1,38 +1,36 @@
 <?php
 
-namespace App\Filament\Resources\UserResource\Widgets;
-use App\Models\User;
+namespace App\Filament\Resources\CompletionResource\Widgets;
+
+use App\Models\Completion;
 use Flowframe\Trend\Trend;
 use Flowframe\Trend\TrendValue;
 use Filament\Widgets\LineChartWidget;
 
-
-class UserCharts extends LineChartWidget
+class CompletionCharts extends LineChartWidget
 {
     protected function getHeading(): string
     {
-        return '用户增长';
+        return 'Token 消耗';
     }
-
     protected function getData(): array
     {
-        $data = Trend::model(User::class)
+        $data = Trend::model(Completion::class)
             ->between(
-                start: now()->addMonths(-6),
+                start: now()->addDays(-10),
                 end: now(),
             )
-            ->perMonth()
+            ->perDay()
             ->count();
 
         return [
             'datasets' => [
                 [
-                    'label' => '用户增长情况',
+                    'label' => 'Token 消耗情况',
                     'data' => $data->map(fn (TrendValue $value) => $value->aggregate),
                 ],
             ],
             'labels' => $data->map(fn (TrendValue $value) => $value->date),
         ];
-
     }
 }
