@@ -12,6 +12,8 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Tables\Filters\Filter;
+
 
 class UserResource extends Resource
 {
@@ -58,7 +60,8 @@ class UserResource extends Resource
                 Tables\Columns\TextColumn::make('llm_tokens')->label("Credit"),
             ])
             ->filters([
-                //
+                Filter::make('is_super_user')->query(fn (Builder $query): Builder => $query->where('is_super_user', true))->toggle()->label("是否是超级管理员")
+
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
