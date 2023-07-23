@@ -63,6 +63,10 @@ return [
          Features::api(),
         // Features::teams(['invitations' => true]),
         Features::accountDeletion(),
+        Features::twoFactorAuthentication([
+            'confirmPassword' => true,
+        ]),
+
     ],
 
     /*
