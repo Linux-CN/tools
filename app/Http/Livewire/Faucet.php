@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\Auth;
 class Faucet extends Component
 {
     public $hasTodayRecords = false;
+    public $successRequestNewCredit = false;
 
     public function AddToken(){
-        $this->hasTodayRecords = true;
 
         DB::transaction(function ()
         {
@@ -23,6 +23,8 @@ class Faucet extends Component
             FaucetModel::create([
                 "user_id" => $user->id
             ]);
+            $this->hasTodayRecords = true;
+            $this->successRequestNewCredit = true;
         });
 
     }
