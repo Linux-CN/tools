@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[\App\Http\Controllers\WebsiteController::class,'construction']);
-Route::Get('/contributor_term',[\App\Http\Controllers\MarkdownPageController::class,'contributor_term']);
+Route::get('/contributor_term',[\App\Http\Controllers\MarkdownPageController::class,'contributor_term']);
+
+Route::redirect('/vscode/login','/login');
+Route::redirect('/vscode/guide','https://github.com/Linux-CN/tools-vscode');
 
 Route::middleware([
     'auth:sanctum',
